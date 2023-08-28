@@ -159,6 +159,9 @@ a{
 .icon--primary{
     fill: var(--color-primary);
 }
+.icon--secondary{
+    fill: var(--color-secondary);
+}
 .icon--white{
     fill: #fff;
 }
@@ -718,4 +721,22 @@ a{
 .block-plans .card{
     max-width: 500px;
     margin: 0 auto;
+}
+
+/* Features block */
+.feature{
+    gap: 4rem 2rem;
+    margin: 12rem;
+}
+.feature__heading{
+    margin: 1rem 0;
+}
+.feature__image{
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;
+    }
 }
