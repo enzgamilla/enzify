@@ -204,7 +204,7 @@ a{
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
-    padding: 2rem 3rem;
+    padding: 2rem 3vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -296,6 +296,7 @@ a{
     border: 0;
     flex-grow: 1;
     padding:  1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn{
@@ -367,11 +368,6 @@ a{
 .plan .list__item{
     margin-bottom: 2rem;
 }
-
-.plan--popular{
-    transform: scale(1.1);
-}
-
 .plan--popular .card__header{
     position: relative;
 }
@@ -393,6 +389,10 @@ a{
 }
 
 @media screen and (min-width:1024px) {
+    .plan--popular{
+        transform: scale(1.1);
+    }
+    
     .plan__name{
         font-size: 1.4rem;
     }
@@ -476,12 +476,12 @@ a{
 
 @media screen and (min-width: 768px) {
     .grid--cols-2{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media screen and (min-width: 1024px) {
     .grid--cols-3{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
@@ -538,6 +538,9 @@ a{
     justify-self: center;
     align-self: center;
 }
+.callout-signup{
+    transform: translateY(5rem);
+}
 
 @media screen and (min-width:768px) {
     .callout .grid--cols-2{
@@ -584,7 +587,7 @@ a{
 
 /* blocks */
 .block{
-    --padding-vertical: 6rem;
+    --padding-vertical: 5rem;
     padding: var(--padding-vertical) 2rem;
 
    
@@ -609,11 +612,11 @@ a{
 
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 .container{
     max-width: 1140px;
@@ -705,8 +708,9 @@ a{
     max-width: 670px;
 }
 .block-domain__prices{
+    color: var(--color-heading);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -734,8 +738,13 @@ a{
 /* Features block */
 .feature{
     gap: 4rem 2rem;
-    margin: 12rem;
+    margin: 12rem 0;
 }
+
+.feature:first-of-type {
+    margin-top: 6rem;
+  }
+
 .feature__heading{
     margin: 1rem 0;
 }
@@ -763,7 +772,7 @@ a{
         justify-self: end;
     }
 
-    .pic {
+    .block-showcase__image > img {
         width: auto;
         max-width: 700px;
     }
@@ -773,6 +782,7 @@ a{
 
 .footer{
     background: #232323;
+    padding-top: 10rem;
 }
 
 .footer a {
